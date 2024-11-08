@@ -288,11 +288,26 @@
 
     &_enough {
       width: 32rem;
-      z-index: 6;
+      z-index: 8;
       transform-origin: top left;
+
       // backdrop-filter: blur(10px);
       @media (min-width: $mobile-small) {
         width: 35vw;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 99%;
+        height: 99%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: transparent;
+        border-radius: 3.5rem;
+        z-index: -1;
+        backdrop-filter: blur(1.5px);
       }
     }
   }
