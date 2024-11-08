@@ -24,6 +24,7 @@
     border-radius: 1.6rem;
     height: 61vw;
     @media (min-width: $mobile-small) {
+      height: auto;
       padding: 2.4rem;
       display: flex;
       flex-direction: column;
@@ -115,6 +116,7 @@
       width: 58vw;
       bottom: -43%;
       left: 15%;
+
       @media (min-width: $mobile-small) {
         width: 100%;
         max-width: 31rem;
