@@ -5,6 +5,7 @@
   background-size: cover;
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
+
   @media (min-width: $mobile-small) {
     padding-top: 3rem;
     padding-bottom: 3.9rem;
@@ -74,26 +75,7 @@
       height: 4.5rem;
     }
   }
-  .location {
-    &__icon {
-    }
 
-    &__text {
-    }
-  }
-  .js-regionFullName {
-  }
-  .selected-region {
-    &__name {
-    }
-  }
-  .tariff-content {
-    &__card {
-    }
-
-    &__image {
-    }
-  }
   .card {
     padding: 2.4rem;
     @media (min-width: $mobile-small) {
@@ -112,13 +94,8 @@
         margin-bottom: 2.4rem;
       }
     }
-
-    &__content {
-    }
-
-    &__footer {
-    }
   }
+  
   .card-header {
     &__title {
       font-family: $font2;

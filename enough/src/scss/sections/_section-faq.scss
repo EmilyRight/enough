@@ -146,7 +146,6 @@
       font-size: 1.5rem;
       line-height: 2.2rem;
       font-family: $font1;
-      color: #fff;
     }
 
     &.active {
@@ -158,7 +157,9 @@
         // padding-top: 2.4rem;
         opacity: 1;
       }
-
+      .link {
+        color: #fff;
+      }
       span {
         transition: 0.4s;
         transform: translate(-50%, -50%) rotate(135deg);
