@@ -1,0 +1,156 @@
+.about {
+  padding-top: 3.6rem;
+  padding-bottom: 1.2rem;
+  @media (min-width: $mobile-small) {
+    padding-bottom: 3.6rem;
+  }
+  .about-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @media (min-width: $mobile-small) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .about-item {
+    box-shadow: 0px 2px 16px 0px #0000000f, 0px -10px 22px 0px #00000008;
+    overflow: hidden;
+    padding: 1.2rem;
+    border-radius: 1.6rem;
+    max-height: 61vw;
+    @media (min-width: $mobile-small) {
+      padding: 2.4rem;
+      display: flex;
+      flex-direction: column;
+      border-radius: 3.2rem;
+      width: calc(100% / 3 - 0.5rem);
+    }
+
+    &__title {
+      font-size: 1.6rem;
+      line-height: 1.4rem;
+      font-family: $font2;
+      text-transform: uppercase;
+      margin: 0;
+      margin-bottom: 0.8rem;
+      @media (min-width: $mobile-small) {
+        line-height: normal;
+      }
+    }
+
+    &__text {
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+      @media (min-width: $mobile-small) {
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+      }
+    }
+  }
+
+  .about-item-image {
+    height: 43vw;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    @media (min-width: $mobile-small) {
+      height: 26rem;
+      margin-top: auto;
+    }
+  }
+  .pic-layer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    &_ruble {
+      width: 41vw;
+      bottom: -20%;
+      left: 24%;
+      @media (min-width: $mobile-small) {
+        width: 81%;
+        max-width: 25rem;
+        bottom: -27%;
+        left: 9%;
+      }
+    }
+
+    &_snow {
+      width: 24vw;
+      top: 11%;
+      right: 17%;
+      @media (min-width: $mobile-small) {
+        width: 41%;
+        max-width: 14rem;
+        top: auto;
+        bottom: 27%;
+        right: 4%;
+      }
+    }
+
+    &_infinity {
+      width: 62vw;
+      bottom: -32%;
+      left: 13%;
+      @media (min-width: $mobile-small) {
+        width: 105%;
+        max-width: 31rem;
+        bottom: -21%;
+        left: auto;
+        right: 6%;
+      }
+    }
+
+    &_gift {
+      width: 58vw;
+      bottom: -43%;
+      left: 15%;
+      @media (min-width: $mobile-small) {
+        width: 100%;
+        max-width: 31rem;
+        bottom: -34%;
+        left: auto;
+        right: 3%;
+      }
+    }
+
+    &_label {
+      width: 33vw;
+      left: 44%;
+      bottom: -3%;
+      @media (min-width: $mobile-small) {
+        width: 105%;
+        max-width: 17rem;
+        bottom: 1%;
+        left: auto;
+        right: 3%;
+      }
+    }
+  }
+}
+
+// @keyframes stamp {
+//   0% {
+//     width: 69vw;
+//     bottom: -14%;
+//     left: 23%;
+//     opacity: 0;
+//   }
+//   100%{
+//     width: 33vw;
+//     left: 44%;
+//     bottom: -3%;
+//     opacity: 1;
+//   }
+
+// }

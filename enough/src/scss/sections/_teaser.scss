@@ -1,0 +1,163 @@
+.teaser {
+  background-color: #141416;
+  padding-bottom: 1.8rem;
+  @media (min-width: $mobile-small) {
+    padding-top: 5.3rem;
+    padding-bottom: 5.3rem;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: $mobile-small) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 0.9rem;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    padding-top: 0.8rem;
+    padding-bottom: 1.8rem;
+    position: relative;
+    @media (min-width: $mobile-small) {
+      padding: 0;
+      margin-top: 3.7rem;
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__buttons {
+    flex-basis: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+  &__image {
+    order: 1;
+    margin-bottom: 0.8rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    width: 100%;
+    height: 43vw;
+    background-image: url("../img/page/teaser-mob@2x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media (min-width: $mobile-small) {
+      max-width: 51%;
+      margin-bottom: 0rem;
+      border-radius: 2.4rem;
+      height: inherit;
+
+      background-image: url("../img/page/teaser-desk@2x.png");
+      background-position: right top;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+
+  .teaser-body {
+    background-color: black;
+    order: 2;
+    max-width: 100%;
+    @media (min-width: $mobile-small) {
+      order: 1;
+      border-radius: 2.4rem;
+      width: 48%;
+    }
+
+    .container {
+      height: 100%;
+      padding: 0;
+      @media (min-width: $mobile-small) {
+        margin: 0;
+        max-width: 100%;
+      }
+    }
+    &__img {
+      margin-bottom: 0.8rem;
+      width: 100%;
+      position: relative;
+      min-height: 14vw;
+      @media (min-width: $mobile-small) {
+        min-height: 6vw;
+      }
+
+      img {
+        position: absolute;
+        width: 100%;
+        display: block;
+        animation: appear 0.2s cubic-bezier(.16,.85,.71,.92) 0.5s 1 normal forwards;
+        animation: name duration timing-function delay iteration-count direction fill-mode;
+        left: -100vw;
+      }
+    }
+    &__text {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      border-radius: 1.2rem;
+      padding: 1.2rem;
+      @media (min-width: $mobile-small) {
+        padding: 2.4rem;
+        border-radius: 2.4rem;
+      }
+    }
+  }
+
+  .teaser-text {
+    &__title {
+      margin: 0;
+      font-family: $font2;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 2.2rem;
+      line-height: 2rem;
+      margin-bottom: 0.8rem;
+      @media (min-width: $mobile-small) {
+        font-size: clamp(3rem, 2.6vw, 3.8rem);
+        line-height: 3.4rem;
+      }
+    }
+
+    &__text {
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+      margin-bottom: 1.2rem;
+      @media (min-width: $mobile-small) {
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+        margin-bottom: 2.4rem;
+      }
+    }
+  }
+  .js-go-next {
+    cursor: pointer;
+  }
+  .teaser-more {
+    display: block;
+    width: 100%;
+    @include btn;
+    font-family: $font2;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    background-color: $color-t2-green;
+    display: flex;
+    justify-content: space-between;
+    @media (min-width: $mobile-small) {
+    }
+  }
+}
+
+@keyframes appear {
+  0% {
+    left: -100vw;
+  }
+
+  100% {
+    left: 0;
+  }
+}

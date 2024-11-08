@@ -1,0 +1,332 @@
+.tariff-card {
+  background-image: url("../img/page/bg-mobile.png"),
+    linear-gradient(92.72deg, #ffffff 45.86%, #c5ccd7 59.67%, #a0a6b1 84.78%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  @media (min-width: $mobile-small) {
+    padding-top: 3rem;
+    padding-bottom: 3.9rem;
+    background-image: url("../img/page/bg-desktop.png");
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $mobile-small) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .tariff-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-bottom: 1.6rem;
+    @media (min-width: $mobile-small) {
+      flex-direction: row;
+      gap: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
+
+    &__label {
+      background-color: #fff;
+      border-radius: 3.5rem;
+      padding: 1rem 1.5rem;
+      max-width: fit-content;
+      display: flex;
+      align-items: center;
+      @media (min-width: $mobile-small) {
+        padding: 1.2rem;
+      }
+      p {
+        font-size: 1.35rem;
+        line-height: normal;
+      }
+    }
+    .location {
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: 0.4s;
+      &:hover {
+        will-change: filter;
+        -webkit-filter: brightness(90%);
+        filter: brightness(90%);
+      }
+      @media (min-width: $mobile-small) {
+        gap: 1rem;
+      }
+    }
+    .location__icon {
+      width: 1.8rem;
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    .disclaimer {
+      background-color: #bfc4cb;
+      color: #fff;
+      height: 4.5rem;
+    }
+  }
+  .location {
+    &__icon {
+    }
+
+    &__text {
+    }
+  }
+  .js-regionFullName {
+  }
+  .selected-region {
+    &__name {
+    }
+  }
+  .tariff-content {
+    &__card {
+    }
+
+    &__image {
+    }
+  }
+  .card {
+    padding: 2.4rem;
+    @media (min-width: $mobile-small) {
+      max-width: 42%;
+    }
+    &__header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: relative;
+      margin-bottom: 1.6rem;
+      @media (min-width: $mobile-small) {
+        flex-direction: row;
+        gap: 2rem;
+        margin-bottom: 2.4rem;
+      }
+    }
+
+    &__content {
+    }
+
+    &__footer {
+    }
+  }
+  .card-header {
+    &__title {
+      font-family: $font2;
+      @include section-title-main;
+      order: 2;
+      @media (min-width: $mobile-small) {
+        order: 1;
+        margin-bottom: 0;
+        font-size: 2.2rem;
+        line-height: normal;
+      }
+    }
+
+    &__label {
+      order: 1;
+      background-color: $color-pink;
+      color: #fff;
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+      border-radius: 1.2rem;
+      padding: 0.3rem 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.8rem;
+
+      @media (min-width: $mobile-small) {
+        order: 2;
+      }
+    }
+
+    &__info {
+      position: absolute;
+      right: 0;
+      width: 2.6rem;
+      display: block;
+      height: 2.6rem;
+      border-radius: 50%;
+      background-color: #bfc4cb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.4s;
+      line-height: 1.6rem;
+
+      &:hover {
+        transform: scale(0.9);
+      }
+    }
+  }
+
+  .benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1.2rem;
+    &__item {
+    }
+  }
+  .benefit {
+    margin-bottom: 1.6rem;
+    &__title {
+      font-family: $font2;
+      font-size: 2rem;
+      line-height: 2.2rem;
+      margin: 0;
+      margin-bottom: 0.3rem;
+    }
+
+    &__text {
+      font-size: 1.5rem;
+      line-height: 2.2rem;
+      @media (min-width: $mobile-small) {
+        max-width: 60%;
+      }
+    }
+
+    &:first-of-type {
+      background-color: #f2f2f2;
+      border-radius: 1.2rem;
+      padding: 1.2rem;
+      .benefit__text {
+        @media (min-width: $mobile-small) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  .benefit-title {
+    &_black {
+      color: #000000;
+    }
+
+    &_grey {
+      color: #808080;
+    }
+  }
+  .card-footer-label {
+    background-color: #d6f5ff;
+    padding: 1.6rem 1.2rem;
+    border-radius: 1.2rem;
+    margin-bottom: 0.8rem;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    &__text {
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+      color: #00a2d9;
+    }
+
+    &__image {
+      position: absolute;
+      right: 0rem;
+      top: 0.5rem;
+      max-width: 5rem;
+      img {
+        display: block;
+        max-width: 100%;
+      }
+    }
+  }
+  .card-footer__link {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-tap-highlight-color: #0000;
+    color: #010101;
+    background-color: #a7fc00;
+    border: none;
+    border-radius: 1rem;
+    justify-content: space-between;
+    padding: 1.6rem 2.4rem;
+    font-family: $font2;
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 2rem;
+    transition: all 0.3s;
+    display: flex;
+    @media (min-width: $mobile-small) {
+      padding: 1.6rem 1.2rem;
+    }
+  }
+
+  .tariff-image {
+    position: relative;
+    height: 26rem;
+    @media (min-width: $mobile-small) {
+      width: 54%;
+      min-height: 100%;
+      margin-top: -5rem;
+    }
+    &__pic-layer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  .pic-layer {
+    &_gb {
+      width: 17rem;
+      z-index: 5;
+      transform-origin: center;
+      transform: translate(-50%, -65%) rotate(60deg);
+      animation: rollToLeft 1s ease 0s 1 normal forwards;
+      @media (min-width: $mobile-small) {
+        width: 19vw;
+      }
+    }
+
+    &_infinity {
+      width: 14rem;
+      z-index: 4;
+      transform-origin: center;
+      transform: translate(-20%, -65%) rotate(8deg);
+      @media (min-width: $mobile-small) {
+        width: 17vw;
+      }
+    }
+
+    &_enough {
+      width: 32rem;
+      z-index: 6;
+      transform-origin: top left;
+      @media (min-width: $mobile-small) {
+        width: 35vw;
+      }
+    }
+  }
+}
+
+@keyframes rollTo {
+  0% {
+    transform: translate(-50%, -65%) rotate(60deg);
+  }
+  100% {
+    transform: translate(-80%, -65%) rotate(08deg);
+  }
+}

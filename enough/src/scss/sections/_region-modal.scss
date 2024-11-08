@@ -1,0 +1,103 @@
+.sticky-bar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $color-dark;
+  padding: 1.2rem 0;
+
+  @media (max-width: 600px) {
+    .region-selector {
+      flex-direction: column;
+      &__text {
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
+      }
+    }
+    .selected-region {
+      &__region-name {
+        margin-right: 0rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+.popup-modal.regions-list {
+  max-width: 100%;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#show-regions {
+  padding: 1.2rem;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  position: static;
+  transform: none;
+  @media (min-width: $mobile-small) {
+    width: 90%;
+    max-width: none;
+    min-height: 90%;
+    padding: 2.4rem;
+  }
+  .modal-box__header h3 {
+    margin: 0;
+  }
+
+  .modal-box__body {
+  }
+
+  .modal-box__actions {
+    padding: 1.2rem;
+  }
+
+  .modal-body {
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* IE и Edge */
+    scrollbar-width: none; /* Firefox */
+    padding: 0.5rem;
+    @media (min-width: $mobile-small) {
+    }
+    &__region-list {
+      columns: 3;
+      @media (min-width: $mobile-small) {
+        columns: 4;
+      }
+      ul,
+      li {
+        color: #fff;
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+        @media (min-width: $mobile-small) {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+  .region-list {
+    &__all {
+    }
+
+    &__group {
+      padding-left: 1.2rem;
+    }
+
+    &__letter {
+    }
+  }
+  .js-set-city {
+    cursor: pointer;
+    transition: 0.4s;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .btn {
+    @include btn;
+  }
+}
